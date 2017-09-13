@@ -1,0 +1,11 @@
+package jackson.ArrayNode;
+
+import org.junit.Test;
+
+public class ArrayNodeTest {
+	
+	@Test
+	public void test1(){
+		
+	}
+}

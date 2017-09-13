@@ -1,0 +1,34 @@
+package jackson.ArrayNode;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+
+public class ArrayNodeTest {
+
+	@Test
+	public void test1() {
+		ObjectMapper om = new ObjectMapper();
+		Map<String, String> hashMap = new HashMap<String, String>();
+		hashMap.put("name", "Õı√œ");
+		hashMap.put("sex", "1");
+		hashMap.put("login", "wwwxxx");
+		hashMap.put("password", "123abc");
+		try {
+			JsonNode one = om.readTree("{\"1\":111}");
+			JsonNode two = om.readTree(om.writeValueAsString(hashMap));
+			ArrayNode arrayNode = om.createArrayNode();
+			arrayNode.add(one);
+			arrayNode.add(two);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
