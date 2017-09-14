@@ -6,9 +6,12 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+
+import bean.User;
 
 public class ArrayNodeTest {
 
@@ -34,5 +37,57 @@ public class ArrayNodeTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	/**
+	 * 将arraynode添加到JsonNode里面
+	 */
+	@Test
+	public void test2() {
+		ObjectMapper om = new ObjectMapper();
+		Map<String, String> hashMap = new HashMap<String, String>();
+		hashMap.put("name", "wm");
+		hashMap.put("sex", "man");
+		try {
+//			2.通过readTree()方法将字符串转为JsonNode
+			JsonNode me = om.readTree(om.writeValueAsString(hashMap));
+			JsonNode ta = om.readTree(om.writeValueAsString(hashMap));
+			ArrayNode arrayNode = om.createArrayNode();
+			arrayNode.add(me);
+			arrayNode.add(ta);
+			Map<String, String> info = new HashMap<String, String>();
+			info.put("info", arrayNode.toString());
+			JsonNode root = om.readTree(om.writeValueAsString(info));
+			System.out.println("root == "+root);
+			System.out.println("info == "+root.get("info"));
+		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	/**
+	 *  将javabean转为json
+	 * @throws IOException 
+	 */
+	@Test
+	public void test3() throws IOException {
+		ObjectMapper om = new ObjectMapper();
+		User user = new User();
+		user.setName("wm");
+		user.setAge(26);
+		JsonNode root = om.readTree(om.writeValueAsString(user));
+		System.out.println(root);
+		System.out.println(om.writerWithDefaultPrettyPrinter().writeValueAsString(user));
+	}
+	/**
+	 *  将json转为javabean
+	 * @throws IOException 
+	 */
+	@Test
+	public void test4() throws IOException {
+		ObjectMapper om = new ObjectMapper();
+		String user = "{\"age\":26,\"name\":\"wm\"}";
+		User root = om.readValue(user, User.class);
+		System.out.println(root);
 	}
 }
