@@ -1,0 +1,27 @@
+package readExcel.demo;
+import java.lang.annotation.*;
+
+/**
+ * 鐢ㄤ簬鏄犲皠瀹炰綋绫诲拰Excel鏌愬垪鍚嶇О
+ *
+ * @author peiyu
+ */
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MapperCell {
+
+    /**
+     * 鍦╡xcel鏂囦欢涓煇鍒楁暟鎹殑鍚嶇О
+     *
+     * @return 鍚嶇О
+     */
+    String cellName() default "";
+
+    /**
+     * 鍦╡xcel涓垪鐨勯『搴忥紝浠庡皬鍒板ぇ鎺�
+     *
+     * @return 椤哄簭
+     */
+    int order() default 0;
+}

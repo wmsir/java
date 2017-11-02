@@ -1,0 +1,12 @@
+package com.github.sd4324530.fastexcel;
+
+import java.io.IOException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+
+public class ReadDemo {
+  public static void main(String[] args) throws InvalidFormatException, IOException {
+    FastExcel fe = new FastExcel("C:/Users/SEELE/Desktop/test.xlsx");
+    fe.setStartRow(3);
+    System.out.println(fe.getCellValue(1, 2));
+  }
+}

@@ -1,0 +1,12 @@
+package bean;
+
+
+/**
+ * 
+ * @author wangmeng.
+ *
+ */
+public class User {
+  public int age;
+  public String name;
+}

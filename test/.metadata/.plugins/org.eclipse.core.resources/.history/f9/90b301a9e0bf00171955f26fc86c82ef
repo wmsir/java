@@ -1,0 +1,8 @@
+package main;
+
+public class Stu {
+  private String name;
+  private String age;
+  private String classname;
+  private String no;
+}

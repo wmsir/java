@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<checkstyle-configurations file-format-version="5.0.0" default-check-configuration="check">
+  <check-configuration name="check" location="E:\Program Files (x86)\java_codeStyle\checkstyle.xml" type="external" description="">
+    <additional-data name="protect-config-file" value="true"/>
+  </check-configuration>
+</checkstyle-configurations>

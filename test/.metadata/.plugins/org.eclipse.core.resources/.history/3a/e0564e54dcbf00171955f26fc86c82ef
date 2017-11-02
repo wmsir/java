@@ -1,0 +1,20 @@
+package com.github.sd4324530.fastexcel;
+
+import java.io.IOException;
+import java.util.List;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+
+public class ReadDemo {
+  public static void main(String[] args) throws InvalidFormatException, IOException {
+    FastExcel fe = new FastExcel("C:/Users/SEELE/Desktop/test.xlsx");
+    System.out.println(fe.getCellValue(2, 2));
+    List<MyTest> tests = fe.parse(MyTest.class);
+    if(null != tests && !tests.isEmpty()) {
+        for(MyTest myTest : tests) {
+            LOG.debug("记录:{}", myTest.toString());
+        }
+    } else {
+        LOG.debug("没有结果");
+    }
+  }
+}

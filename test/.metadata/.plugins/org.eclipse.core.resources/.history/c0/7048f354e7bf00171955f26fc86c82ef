@@ -1,0 +1,73 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+
+public class Test {
+
+  public static void main(String[] args) {
+    // File file = new File("C:/Users/SEELE/Desktop/test.xlsx");
+    String filePath = "C:/Users/SEELE/Desktop/test.xlsx";
+    // System.out.println(ExcelUtil.getColumnNum(filePath, "学号"));
+
+    // ExcelUtil.printColumnNumInfo(filePath, ExcelUtil.getColumnNum(filePath, "学号"));
+//    ExcelUtil.printAllInfo(filePath);
+
+    String s1 = "王孟";
+    String s2 = "12";
+    String s3 = "123";
+    String s4 = "1";
+    // 模拟xml数据
+    ArrayList<String> a1 = new ArrayList<String>();
+    a1.add("姓名");
+    a1.add("年纪");
+    a1.add("班级");
+    a1.add("学号");
+    ArrayList<String> a2 = new ArrayList<String>();
+    a2.add("姓名2");
+    a2.add("年纪2");
+    a2.add("班级2");
+    a2.add("学号2");
+    HashMap<String, ArrayList<String>> h1 = new HashMap<String, ArrayList<String>>();
+    h1.put("1", a1);
+    h1.put("2", a2);
+    System.out.println("xxx"+h1.get("x"));
+
+    // 模拟Excel数据
+    ArrayList<String> b1 = new ArrayList<String>();
+    b1.add("姓名");
+    b1.add("年纪");
+    b1.add("班级");
+    b1.add("学号");
+    ArrayList<String> b2 = new ArrayList<String>();
+    ArrayList<String> b3 = new ArrayList<String>();
+    b2.add("姓名");
+    b2.add("年纪");
+    b2.add("班级");
+    b2.add("学号b2");
+    
+    b3.add("姓名");
+    b3.add("年纪");
+    b3.add("班级");
+    b3.add("学号b2");
+
+    HashMap<String, ArrayList<String>> h2 = new HashMap<String, ArrayList<String>>();
+    h2.put("1", b1);
+    h2.put("2", b2);
+    h2.put("2", b3);
+
+    Iterator<Entry<String, ArrayList<String>>> it1 = h1.entrySet().iterator();
+    while (it1.hasNext()) {
+      Entry<String, ArrayList<String>> entry1 = it1.next();
+      String tempKey = entry1.getKey();
+      if(!entry1.getValue().equals(h2.get(tempKey))){
+        System.out.println(tempKey+" == ");
+      }
+    }
+
+  }
+
+
+}

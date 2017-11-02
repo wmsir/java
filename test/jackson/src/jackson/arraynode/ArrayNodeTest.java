@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,13 +11,16 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import bean.User;
 
+import org.junit.Test;
+
 public class ArrayNodeTest {
 
 	@Test
 	public void test1() {
 //		1.创建一个ObjectMapper对象 om
+	  int x =10;
 		ObjectMapper om = new ObjectMapper();
-		Map<String, String> hashMap = new HashMap<String, String>();
+		Map<String, String> hashMap = new HashMap<String, String>(16);
 		hashMap.put("name", "wm");
 		hashMap.put("sex", "1");
 		hashMap.put("login", "wwwxxx");
@@ -43,7 +45,7 @@ public class ArrayNodeTest {
 	@Test
 	public void test2() {
 		ObjectMapper om = new ObjectMapper();
-		Map<String, String> hashMap = new HashMap<String, String>();
+		Map<String, String> hashMap = new HashMap<String, String>(16);
 		hashMap.put("name", "wm");
 		hashMap.put("sex", "man");
 		try {
@@ -53,7 +55,7 @@ public class ArrayNodeTest {
 			ArrayNode arrayNode = om.createArrayNode();
 			arrayNode.add(me);
 			arrayNode.add(ta);
-			Map<String, String> info = new HashMap<String, String>();
+			Map<String, String> info = new HashMap<String, String>(16);
 			info.put("info", arrayNode.toString());
 			JsonNode root = om.readTree(om.writeValueAsString(info));
 			System.out.println("root == "+root);
