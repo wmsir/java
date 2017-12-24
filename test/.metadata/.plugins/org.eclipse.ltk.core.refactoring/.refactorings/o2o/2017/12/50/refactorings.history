@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;o2o/src/main/java/dbinfo.txt&apos; to &apos;db_table_info.txt&apos;" description="Rename resource &apos;dbinfo.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/dbinfo.txt" name="db_table_info.txt" stamp="1513171685385" updateReferences="true"/>
+</session>
