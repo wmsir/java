@@ -6,7 +6,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<properties resource="jdbc.properties" />
 	<!-- 别名 包以其子包下所有类 头字母大小都行 -->
 	<typeAliases>
-		<package name="mybatis.pojo" />
+		<!-- <typeAlias type="com.itheima.mybatis.pojo.User" alias="User"/> -->
+		<package name="com.itheima.mybatis.pojo" />
 	</typeAliases>
 	<!-- 和spring整合后 environments配置将废除 -->
 	<environments default="development">
