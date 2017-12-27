@@ -21,7 +21,7 @@ public class JdbcUtils {
   private static String password = "root";
 
   /**
-   * 返回连接对象
+   * 返回连接对象。
    */
   public static Connection getConnection() {
     try {

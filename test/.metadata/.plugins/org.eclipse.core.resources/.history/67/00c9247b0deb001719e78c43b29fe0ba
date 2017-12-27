@@ -1,0 +1,50 @@
+package bean;
+
+import java.util.HashMap;
+
+/**
+ * 
+ * @author wangmeng.
+ *
+ */
+public class User {
+  public int age;
+  public String name;
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+  public static HashMap<String,String> getMap(){
+    HashMap<String,String> m = new HashMap<String,String>();
+    String name ="";
+    m.put(name, "wm");
+    m.put(name, "");
+    return m;
+  }
+  public static User getUser(){
+    User u = new User();
+    u.setAge(10);
+    u.setName("wm");
+    return u;
+  }
+  @Override
+  public String toString() {
+    return "User [age=" + age + ", name=" + name + "]";
+  }
+  public static void main(String[] args) {
+    System.out.println(getUser());
+  }
+
+}
