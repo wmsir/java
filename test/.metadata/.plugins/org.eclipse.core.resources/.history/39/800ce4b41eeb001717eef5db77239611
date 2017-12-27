@@ -1,0 +1,5 @@
+package mybatis.junit;
+
+public class MybatisDaoTest {
+
+}
