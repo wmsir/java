@@ -1,0 +1,12 @@
+package o2o.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import o2o.BaseTest;
+
+public class ShopDaoTest extends BaseTest{
+
+  
+  @Autowired
+  private ShopDao shopDao;
+  
+}

@@ -1,0 +1,10 @@
+package o2o.dao;
+
+public class ShopDao {
+  
+  
+  
+  public int insertShop(shop){
+    
+  }
+}

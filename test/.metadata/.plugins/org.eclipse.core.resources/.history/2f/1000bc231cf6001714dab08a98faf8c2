@@ -1,0 +1,25 @@
+package o2o.dao;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import o2o.BaseTest;
+import o2o.entity.Area;
+import o2o.entity.PersonInfo;
+import o2o.entity.Shop;
+
+public class ShopDaoTest extends BaseTest{
+
+  
+  @Autowired
+  private ShopDao shopDao;
+  
+  
+  @Test
+  public void testinsertShop(){
+    Shop shop = new Shop();
+    PersonInfo owner = new PersonInfo();
+    Area area = new Area();
+    
+  }
+  
+}
