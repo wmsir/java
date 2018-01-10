@@ -1,7 +1,0 @@
-package dao;
-
-import com.mysql.jdbc.log.Log4JLogger;
-
-public class X {
-  Log4JLogger l
-}

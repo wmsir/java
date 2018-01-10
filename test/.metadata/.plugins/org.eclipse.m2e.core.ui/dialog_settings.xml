@@ -33,8 +33,15 @@
 			<item value="https://github.com/sd4324530/fastexcel/issues"/>
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="127" key="y"/>
+		<item value="590" key="height"/>
+	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\BaiduYunDownload\-----------------------视频----------------------------\SSM到Spring Boot-从零开发校园商铺平台 加\源码1\u1tigt"/>
 			<item value="C:\Users\SEELE\Downloads\fastexcel-master"/>
 		</list>
 		<list key="projectNameTemplate">

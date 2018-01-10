@@ -2,15 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="parse" key="selection"/>
+		<item value="logback" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="parse"/>
-			<item value="par"/>
-			<item value="System"/>
+			<item value="logback"/>
+			<item value="logba"/>
+			<item value="proxy-target-class"/>
+			<item value="mysql"/>
+			<item value="jdbc.Diver"/>
+			<item value="com.mysql.jdbc.Diver"/>
+			<item value="jdbc"/>
+			<item value="DataSourceTransactionManager"/>
 		</list>
 		<list key="replacehistory">
 		</list>

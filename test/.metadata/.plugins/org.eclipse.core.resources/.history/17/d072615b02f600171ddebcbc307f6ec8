@@ -1,0 +1,9 @@
+package o2o.dao;
+
+public class AreaDao {
+  /**
+   * 列出区域列表
+   * @return arealist
+   */
+  List<Area> queryArea();
+}

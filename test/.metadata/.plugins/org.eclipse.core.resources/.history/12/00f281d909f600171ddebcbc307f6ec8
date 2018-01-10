@@ -1,0 +1,11 @@
+package o2o.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import o2o.dao.AreaDao;
+
+public class AreaServiceImpl implements AreaService{
+  @Autowired
+  private AreaDao areaDao;
+  
+  
+}

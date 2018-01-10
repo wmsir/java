@@ -1,8 +1,0 @@
-package com.itheima.mybatis.dao;
-
-import dao.com.itheima.mybatis.pojo.User;
-
-public interface UserDao {
-
-  public User selectUserById(Integer id);
-}

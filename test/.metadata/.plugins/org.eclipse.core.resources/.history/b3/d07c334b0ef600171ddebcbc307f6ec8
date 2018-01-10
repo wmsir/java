@@ -1,0 +1,22 @@
+package o2o.service;
+
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import o2o.BaseTest;
+import o2o.entity.Area;
+import o2o.service.impl.AreaServiceImpl;
+
+
+public class AreaServiceTest extends BaseTest {
+  
+  @Autowired(required=true)
+  private AreaServiceImpl areaService;
+  
+  @Test
+  public void testgetAreaList(){
+    List<Area> arerList = areaService.getAreaList();
+    assertEquals("西安",arerList.get(0).getAreaName());
+  }
+}

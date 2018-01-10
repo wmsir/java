@@ -1,9 +1,0 @@
-package com.itheima.mybatis.dao;
-
-import com.itheima.mybatis.pojo.User;
-
-public interface UserDao {
-
-	//通过用户ID查询�?个用�?
-	public User selectUserById(Integer id);
-}

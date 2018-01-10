@@ -1,0 +1,26 @@
+package o2o.service;
+
+import static org.junit.Assert.*;
+import java.util.List;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import o2o.BaseTest;
+import o2o.entity.Area;
+import o2o.service.impl.AreaService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+//告诉junit spring的配置文件路径
+@ContextConfiguration({"classpath:spring/spring-dao.xml"})
+public class AreaServiceTest extends BaseTest {
+  
+  @Autowired
+  private AreaService areaService;
+  
+  
+  public void testgetAreaList(){
+    List<Area> arerList = areaService.getAreaList();
+    assertEquals("西安",arerList.get(0).getAreaName());
+  }
+}

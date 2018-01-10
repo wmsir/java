@@ -29,4 +29,5 @@ public class MybatisDaoTest {
       User user = userDao.selectUserById(10);
       System.out.println(user);
   }
+  
 }

@@ -1,0 +1,5 @@
+package o2o.service.impl;
+
+public class AreaServiceImpl {
+
+}

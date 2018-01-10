@@ -1,0 +1,12 @@
+package o2o.dao;
+
+import java.util.List;
+import o2o.entity.Area;
+
+public class AreaDao {
+  /**
+   * 列出区域列表
+   * @return arealist
+   */
+  List<Area> queryArea();
+}

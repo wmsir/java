@@ -1,0 +1,14 @@
+package o2o.web.superadmin;
+
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/superadmin")
+public class AreaController {
+  private Map<String,Object> listArea(){
+    Map<String,Object> modelMap = new HashMap<String,Object>();
+  }
+}

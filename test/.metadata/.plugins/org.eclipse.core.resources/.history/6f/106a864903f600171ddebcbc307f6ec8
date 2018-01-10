@@ -1,0 +1,13 @@
+package o2o.dao;
+
+
+/**
+ * 用來配置sprig和junit整合，
+ * junit启动时加载springIOC容器
+ * @author wangmeng
+ *
+ */
+@Runwith()
+public class BaseTest {
+
+}
