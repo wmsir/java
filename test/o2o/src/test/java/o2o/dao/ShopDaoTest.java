@@ -42,5 +42,17 @@ public class ShopDaoTest extends BaseTest{
     
     
   }
+  @Test
+  public void testUpdateShop(){
+    Shop shop = new Shop();
+    shop.setShopId(34L);
+    shop.setShopName("wm");
+    shop.setShopDesc("this is wm");
+    shop.setShopAddr("xian");
+    shop.setLastEditTime(new Date());
+    int effectedNum = shopDao.updateShop(shop);
+    assertEquals(1, effectedNum);
+    
+  }
   
 }

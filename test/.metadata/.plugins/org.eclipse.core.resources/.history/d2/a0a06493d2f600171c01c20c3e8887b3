@@ -1,0 +1,8 @@
+package o2o.utils;
+
+public class PathUtil {
+  public static String getImageBasePath(){
+    String os = System.getProperty("os.name");
+    
+  }
+}

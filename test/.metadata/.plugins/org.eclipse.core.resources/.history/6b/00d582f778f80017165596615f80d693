@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+
+$(function(){
+	var initUrl = "/o2o/shopadmin/getshopinfo";
+	var regiterShopUrl = "/o2o/shopadmin/regitershop";
+	
+	
+	
+})

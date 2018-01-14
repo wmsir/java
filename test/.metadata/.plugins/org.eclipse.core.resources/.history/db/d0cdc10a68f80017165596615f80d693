@@ -1,0 +1,15 @@
+package o2o.web.shopadmin;
+
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+@RequestMapping("/shopadmin")
+public class ShopManagementController {
+  private Map<String,Object> registerShop(HttpServletRequest request){
+    
+  }
+}

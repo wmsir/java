@@ -1,0 +1,11 @@
+package o2o.service;
+
+import java.io.File;
+import o2o.dto.ShopExecution;
+import o2o.entity.Shop;
+
+public interface ShopService {
+
+  
+  public ShopExecution addShop(Shop shop,File shopImg);
+}

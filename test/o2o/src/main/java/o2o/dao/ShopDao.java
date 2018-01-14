@@ -7,4 +7,5 @@ public interface ShopDao {
 
 
   public int insertShop(Shop shop);
+  public int updateShop(Shop shop);
 }

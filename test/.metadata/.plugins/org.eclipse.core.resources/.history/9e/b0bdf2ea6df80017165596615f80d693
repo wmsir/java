@@ -1,0 +1,26 @@
+package o2o.service.impl;
+
+import java.io.File;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import o2o.dao.ShopDao;
+import o2o.dto.ShopExecution;
+import o2o.entity.Shop;
+import o2o.service.ShopService;
+
+@Service
+public class ShopServiceImpl implements ShopService{
+  @Autowired
+  private ShopDao shopDao;
+  @Override
+  @Transactional
+  public ShopExecution addShop(Shop shop, File shopImg) {
+    if(null == shop ){
+      return new ShopExecution();
+    }
+    
+    return null;
+  }
+
+}

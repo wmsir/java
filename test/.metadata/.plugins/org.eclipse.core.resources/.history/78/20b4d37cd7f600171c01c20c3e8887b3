@@ -1,0 +1,17 @@
+package o2o.service.impl;
+
+import java.io.File;
+import org.springframework.stereotype.Service;
+import o2o.dto.ShopExcution;
+import o2o.entity.Shop;
+import o2o.service.ShopService;
+
+@Service
+public class ShopServiceImpl implements ShopService{
+
+  @Override
+  public ShopExcution addShop(Shop shop, File shopImg) {
+    return null;
+  }
+
+}

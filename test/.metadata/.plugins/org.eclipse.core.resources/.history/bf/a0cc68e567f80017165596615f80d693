@@ -1,0 +1,5 @@
+package o2o.web.shopadmin;
+
+public class ShopManagementController {
+
+}

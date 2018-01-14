@@ -1,0 +1,14 @@
+package o2o.enums;
+
+public enum ShopStateEnum {
+  CHECK(0,"审核中");
+  
+  private int state;
+  private String info;
+  private ShopStateEnum(Integer state,String info){
+    this.state = state;
+    this.info = info;
+  }
+  
+  
+}

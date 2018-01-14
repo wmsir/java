@@ -1,0 +1,33 @@
+package o2o.enums;
+
+public enum ShopStateEnum {
+  CHECK(0,"审核中"),
+  OFFLINE(-1,"非法店铺");
+  
+  private int state;
+  private String info;
+  private ShopStateEnum(Integer state,String info){
+    this.state = state;
+    this.info = info;
+  }
+  
+  public static String stateOf(int state){
+    for (ShopStateEnum stateEnum : values()) {
+      if( stateEnum.getState()==  state ){
+        return stateEnum;
+      }
+    }
+    return null;
+  }
+
+  public int getState() {
+    return state;
+  }
+
+  public String getInfo() {
+    return info;
+  }
+
+  
+  
+}
